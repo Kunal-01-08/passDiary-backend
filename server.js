@@ -20,7 +20,8 @@ app.use(express.json());
 
 const sk = process.env.JWT_SECRET;
 
-let con = await mongoose.connect("mongodb://localhost:27017/passDiaryDB");
+let con = await mongoose.connect("mongodb+srv://vishuzado:"+process.env.DB_PASSWORD+"@cluster0.upnngcc.mongodb.net/passDiaryDB");
+
 const port = 3000;
 
 app.post("/Signup", async (req, res) => {
