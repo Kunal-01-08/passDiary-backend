@@ -25,6 +25,7 @@ let con = await mongoose.connect(`mongodb+srv://vishuzado:${process.env.DB_PASSW
 const port = 3000;
 
 app.post("/Signup", async (req, res) => {
+  console.log("Initialising New Signup")
   let n_email = req.body.email;
   let n_password = req.body.password;
   let isValid=validator.isEmail(n_email)
