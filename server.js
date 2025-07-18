@@ -20,7 +20,7 @@ app.use(express.json());
 
 const sk = process.env.JWT_SECRET;
 
-let con = await mongoose.connect("mongodb+srv://vishuzado:"+process.env.DB_PASSWORD+"@cluster0.upnngcc.mongodb.net/passDiaryDB");
+let con = await mongoose.connect(`mongodb+srv://vishuzado:${process.env.DB_PASSWORD}@cluster0.upnngcc.mongodb.net/passDiaryDB?retryWrites=true&w=majority&appName=Cluster0`);
 
 const port = 3000;
 
