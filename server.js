@@ -52,7 +52,7 @@ app.post("/Signup", async (req, res) => {
     let newUser = new UnverifiedUser({ email: n_email, password: hashedPassword, createdat:Date.now()});
     await newUser.save();
     console.log("User added");
-    res.json({ message: "New user added , click on the verification link sent on the email, link is active for 10 minutes", status: "Signup successful" });
+    res.json({ message: "New user added , click on the verification link sent on the email", status: "Signup successful" });
 
      const transporter = nodemailer.createTransport({
       service: "gmail",
