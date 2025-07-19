@@ -67,7 +67,7 @@ app.post("/Signup", async (req, res) => {
   from: process.env.MY_EMAIL,
   to: n_email,
   subject: 'Email verification link',
-  text: `Click here to verify your email:https://passdiary-backend.onrender.com/EmailVerification?email=${n_email}`
+  text: `Click here to verify your email:https://pass-diary-frontend.vercel.app/EmailVerification?email=${n_email}`
 };
 
  transporter.sendMail(mailOptions, (err, info) => {
@@ -193,7 +193,7 @@ app.post("/ForgotPassword", async (req, res) => {
   from: process.env.MY_EMAIL,
   to: email,
   subject: 'Password Reset',
-  text: `Click here to reset your password: https://passdiary-backend.onrender.com/ResetPassword?token=${token}`
+  text: `Click here to reset your password: https://pass-diary-frontend.vercel.app/ResetPassword?token=${token}`
 };
 
  transporter.sendMail(mailOptions, (err, info) => {
